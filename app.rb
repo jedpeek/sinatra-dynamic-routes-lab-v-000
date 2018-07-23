@@ -42,6 +42,5 @@ class App < Sinatra::Base
         answer = 'Unable to perform this operation'
       end
       answer
-    end
   end
 end
