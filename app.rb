@@ -26,18 +26,18 @@ class App < Sinatra::Base
     end
 
     get '/:operation/:number1/:number2' do
-      @number1 = params[:number1].to_i
-      @number2 = params[:number2].to_i
+      @num1 = params[:number1].to_i
+      @num2 = params[:number2].to_i
       @operator = params[:operation]
 
       if @operator == 'add'
-        answer = (number1 + number2).to_s
+        answer = (@num1 + @num2).to_s
       elsif @operator == 'subtract'
-        answer = (number1 - number2).to_s
+        answer = (@num1 - @num2).to_s
       elsif @operator == 'multiply'
-        answer = (number1 * number2).to_s
+        answer = (@num1 * @num2).to_s
       elsif @operator == 'divide'
-        answer = (number1 / number2).to_s
+        answer = (@num1/@num2).to_s
       else
         answer = 'Unable to perform this operation'
       end
