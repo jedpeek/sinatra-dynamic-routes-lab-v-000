@@ -4,12 +4,12 @@ class App < Sinatra::Base
 
     get "/reverse/:name" do
       @name = params[:name]
-      @name.reverse
+      "#{@name.reverse}"
     end
 
     get "/square/:num" do
       @num = params[:num].to_i
-      Math.sqrt(@num).to_s
+      "#{Math.sqrt(@num).to_s}"
     end
 
     get '/say/:number/:phrase' do
