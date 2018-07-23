@@ -26,7 +26,7 @@ class App < Sinatra::Base
     @operation = params[:operation]
     @num1 = params[:number1].to_i
     @num2 = params[:number2].to_i
-    "#{@}"
+    "#{@num1 @operation @num2}"
 
 
 end
