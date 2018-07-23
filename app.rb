@@ -18,6 +18,7 @@ class App < Sinatra::Base
     @number.times do
       answer += @phrase
     end
+    answer
   end
 
 
